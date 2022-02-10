@@ -136,15 +136,4 @@ async function run(args) {
   recordInfo.push("===================");
   console.log(recordInfo.join("\n  "));
 
-  email({
-    subject: "掘金每日签到",
-    text: console.toString()
-  });
 }
-
-run(process.argv.splice(2)).catch(error => {
-  email({
-    subject: "掘金每日签到",
-    html: `<b>Error</b><div>${error.message}</div>`
-  });
-});
