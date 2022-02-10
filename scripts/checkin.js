@@ -137,3 +137,7 @@ async function run(args) {
   console.log(recordInfo.join("\n  "));
 
 }
+
+run(process.argv.splice(2)).catch(error => {
+  console.log("掘金每日签到失败了："+error.message);
+});
